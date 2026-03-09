@@ -34,3 +34,7 @@ Thumbs.db
 
 # Cache
 .cache/
+
+# local auth
+configs/cookie.json
+data/auth.json
