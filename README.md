@@ -66,13 +66,13 @@ SCADA Desktop Termovizor — это приложение для монитори
 
 ## Архитектура проекта
 
-api/ — клиент OwenCloud API
-models/ — модели данных и логика событий
-services/ — сервисы хранения данных
-ui/ — интерфейс приложения
-widgets/ — пользовательские виджеты
-utils/ — вспомогательные функции
-web/ — HTML карта (Leaflet)
+- api/ — клиент OwenCloud API
+- models/ — модели данных и логика событий
+- services/ — сервисы хранения данных
+- ui/ — интерфейс приложения
+- widgets/ — пользовательские виджеты
+- utils/ — вспомогательные функции
+- web/ — HTML карта (Leaflet)
 
 ---
 
@@ -136,10 +136,10 @@ The application displays key technological parameters of boilers, events, alarms
 
 ## Project Architecture
 
-api/ — OwenCloud API client
-models/ — data models and event logic
-services/ — data storage services
-ui/ — application interface
-widgets/ — custom UI widgets
-utils/ — helper utilities
-web/ — HTML map (Leaflet)
+- api/ — OwenCloud API client
+- models/ — data models and event logic
+- services/ — data storage services
+- ui/ — application interface
+- widgets/ — custom UI widgets
+- utils/ — helper utilities
+- web/ — HTML map (Leaflet)
