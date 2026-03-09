@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта</title>
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #101215;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  const map = L.map('map', {
+      attributionControl: false,
+
+      // Плавность перемещения
+      inertia: true,
+      inertiaDeceleration: 3000,
+      inertiaMaxSpeed: 1500,
+
+      // Главное - не перерисовывать тайлы постоянно во время движения
+      updateWhenIdle: true,
+      updateWhenZooming: false,
+  }).setView([52.286974, 104.305018], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+
+      // Держим больше тайлов в буфере, чтобы меньше "подгружать" при панорамировании
+      keepBuffer: 6,
+
+      // Чуть разгружает при резких движениях/масштабировании
+      updateWhenIdle: true,
+      updateWhenZooming: false
+  }).addTo(map);
+
+  const marker = L.marker([52.286974, 104.305018]).addTo(map);
+  marker.bindPopup("<b>Котельная</b><br>Объект OwenCloud");
+</script>
+
+</body>
+</html>
